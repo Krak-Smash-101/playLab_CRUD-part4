@@ -17,6 +17,15 @@
 		@inputText(addProductForm("name"), '_label -> "Name",'class -> "form-control")
 		@inputText(addProductForm("category"), '_label -> "Category",'class -> "form-control")
 		@inputText(addProductForm("description"), '_label -> "Description",'class -> "form-control")
+
+		@select(
+			addProductForm("category.id"),
+
+			options(Category.options),
+			'_label -> "Category", '_default -> "-- Choose a Category --",
+			'_showConstraints -> false, 'class -> "form-control"
+		)
+		<!-- add other description here??-->
 		@inputText(addProductForm("stock"), '_label -> "Stock",'class -> "form-control")
 		@inputText(addProductForm("price"), '_label -> "Price",'class -> "form-control")
 
